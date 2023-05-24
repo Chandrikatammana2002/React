@@ -1,0 +1,289 @@
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /*box-shadow: 0 2px 4px rgba(0,0,0,.1);*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;  /* rem wrt the root element font size 1rem=16px*/
+}
+.emoji {
+  display: inline-block;
+  animation: wave 1s infinite;
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg) }
+  25% { transform: rotate(20deg) }
+  50% { transform: rotate(0deg) }
+  75% { transform: rotate(-20deg) }
+  100% { transform: rotate(0deg) }
+}
+
+.nav-menu{
+    display: flex; /*to get in one row*/
+}
+
+.nav-menu li{
+    
+    list-style: none;
+    padding: 0 1rem; /*left right0*/
+}
+.nav-menu li :hover{
+    color:white;
+    font-size: x-large;
+}
+.nav-menu li a{
+
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+h2, p, h4,a{
+  color:white;
+  text-decoration: none;
+}
+.intro{
+    padding: 1rem;
+    margin: 0px;
+}
+
+  .container1{
+    color:white;
+    margin-left:160px;
+    padding-top:130px ;
+    padding-bottom: 40px;
+    font-family: Sofia,sans-serif;
+    @media screen and (max-width:600px) {
+      font-size:small;
+      padding-top:200px;
+      margin:0px 50px 0px 80px;
+    }
+  }
+  .container1 .intro{
+    padding-bottom: 40px;
+  }
+  .intro h1{
+    font-size: 35px;
+    color:white; 
+    font-family: serif;
+  }
+  
+  .container1 .res{
+    
+    background-color: whitesmoke;
+    padding: 10px;
+    margin:10px;
+    color:rgb(0, 0, 0);
+    border: 1px solid rgb(174, 173, 167);
+    border-radius: 25px;
+  }
+  .container1 .res:hover{
+    background-color: rgb(192, 87, 11);
+    color: white;
+    cursor: pointer;
+    border: 2px solid white;
+    transition: all 0.5s;
+  }
+  .foot{
+    position: relative;
+    margin-top: 10rem;
+    background-color: rgb(19, 18, 18);
+    padding: 6rem 30rem;
+    width: 100%;
+    display: flex;
+    @media (max-width:600px) {
+      padding:2rem 10rem;
+    }
+  }
+  .foot .symbols a{
+    padding: 30px;
+    @media (max-width:600px) {
+      padding-right:20px;
+    }
+  }
+  .symbols a:hover{
+    padding: 10px;
+    transition: all 0.5s;
+  }
+  .project{
+      background-image:url("../img/proimg.jpg");
+      background-size:cover;
+      background-attachment: fixed;
+      background-position: center;
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  .project p,h2{
+    padding-bottom: 20px;
+  }
+  
+  .project-content{
+    display: flex; /*to get the projects side by side even we writen in div tags.*/
+    flex-wrap: wrap; /*wrap on multiple lines if there is no suffecient space in the flex container*/
+    color:rgb(232, 220, 220);
+    font-size: 18px;
+    
+  }
+  .project1{
+    margin-top: 6rem;
+    width: 30vw; /*view port widht 20vw means 20 percent of viewport width*/
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    padding: 50px;
+    margin-left: 15vw;
+    margin-bottom: 40px;
+    border: 1px solid rgb(101, 91, 91);
+    border-radius: 50px;
+    background-color: rgb(41, 41, 44);
+    @media screen and (max-width:600px) {
+      width:fit-content;
+      margin-right:45px;
+      font-size:small;
+    }
+  }
+  
+  
+  .project1:hover{
+    border: 3px solid white;
+    background-image: linear-gradient(rgb(117, 109, 109),black,rgb(117, 109, 109));
+    transition:all 0.5s;
+    color: antiquewhite;
+    
+  }
+  .project-content a{
+    text-decoration: none;
+    color: rgb(14, 242, 242);
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-left: 6em;
+    padding: 20px;
+    width:fit-content;
+    background-color: rgb(50, 45, 45);
+    font-size: 18px;
+  }
+  .project-content a:hover{
+    transition: all 0.5s;
+    border: 3px solid white;
+  }
+  .container2{
+    border: 1px solid white;
+    margin-top:250px;
+    border-radius: 20px;
+    padding: 20px;
+    width: fit-content;
+    font-family: Sofia,sans-serif;
+    @media screen and (max-width:600px){
+      font-size:small;
+
+    }
+  }
+  .image-container {
+    display: flex;
+    align-items: center;
+  
+  }
+  
+  .image-wrapper {
+    width: 150px;
+    margin-right: 5px; /* Adjust the spacing between image and name as needed */
+  }
+  
+  .image-name {
+    flex-grow: 1;
+  }
+  .image-wrapper #py{
+    margin-left: 3rem;
+  }
+  .image-container #co{
+    margin-left: 2rem;
+    margin-top: 2rem;
+  }
+  .image-container #re,#js{
+    margin-left: 3rem;
+    margin-top: 2rem;
+  }
+  .image-container #sq,#ht{
+    margin-left: 2rem;
+    margin-top: 2rem;
+  }
+  .cont{
+    background-image: url(../img/proimg.jpg);
+    padding: 6rem;
+    text-align: center;
+    @media screen and (max-width:600px) {
+      background-image:none;
+      text-align:center;
+    }
+    
+  }
+  .container h3{
+    margin-top:5rem; /*for drop a comment*/
+    
+  }
+  .contact-form{
+    padding: 3rem;
+    /*to center the form part like name email message feilds*/
+    display: flex;
+    justify-content: center;
+    @media screen and (max-width:600px){
+      margin: 0px;
+      justify-content:center;
+    }
+  
+  }
+  .contain{
+    background-image: linear-gradient(rgb(117, 109, 109),black,rgb(117, 109, 109));
+    border: 3px solid whitesmoke;
+    margin: 10rem;
+    border-radius: 20px;
+    @media screen and (max-width:600px){
+      font-size:small;
+      width:fit-content;
+      border:none;
+    }
+  }
+  td input{
+    margin: 1rem;
+    border-radius: 8px;
+  }
+  input[type="submit"]{
+    border: 1px solid white;
+    width: 4rem;
+    background-color: forestgreen;
+    color:white;
+    height: 3rem;
+  }
+
+  input[type="submit"] :hover{
+    cursor: pointer;
+  }
+
+  
+  .ab{
+    background-image: linear-gradient(rgb(87, 76, 76),rgb(75, 69, 69),rgb(87, 76, 76));
+    border: 1px solid white;
+    width:450px;
+    padding: 1rem;
+    margin:0.5rem;
+    border-radius: 2rem;
+    line-height: 2;
+    font-size: larger;
+  }
+
+  .ab :hover{
+    border: 2px solid white;
+    transition: all 0.5s;
+    background-image: linear-gradient(rgb(117, 109, 109),rgb(117, 109, 109));
+  }
+  .abhead{
+    margin: 2rem;
+    font-size: x-large;
+    color:aqua
+
+  }
+  
