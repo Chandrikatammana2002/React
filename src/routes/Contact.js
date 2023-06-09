@@ -5,10 +5,10 @@ function Contact(){
     //formspree is an website the mail you have login on that will get the message when we submit the  name attribute is important in the forms
     //for map got to gmail.com and enter the location and copy the embeded code 
     return(
-        <div>
+        <div className="contback">
             <Navbar/>
           <div className="cont">
-            
+          
             <h2>Fell Free To Contact</h2>
             <br/>
             <br/>

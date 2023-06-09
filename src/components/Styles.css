@@ -1,17 +1,111 @@
-.header{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  /*box-shadow: 0 2px 4px rgba(0,0,0,.1);*/
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;  /* rem wrt the root element font size 1rem=16px*/
-}
+
 .emoji {
   display: inline-block;
   animation: wave 1s infinite;
+  
+}
+
+*{
+  margin:0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.navbar {
+  width: 100%;
+  height: 50px;
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 ;
+}
+.nav-title a{
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.nav-title h2 {
+  position: relative;
+  top:0.5rem;
+  left: 0%;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+
+
+.links {
+  font-size: 18px;
+}
+.links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 13px 10px 13px 10px;
+}
+
+.links a:hover {
+  font-size: 1.5rem;
+  transition: all 0.5s;
+}
+
+
+.hamburgerMenu label div {
+  border-top: 2px solid #fff;
+  display: block;
+  height: 10px;
+  width: 25px;
+}
+
+.hamburgerMenu{
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+
+@media (max-width:600px) {
+  
+  .navbar {
+      justify-content: space-between;
+  }
+
+  .hamburgerMenu{
+      display: block;
+      margin-right: 20px;
+  }
+
+  .hamburgerMenu label {
+      display: inline-block;
+      cursor: pointer;
+      padding: 13px;
+      height: 50px;
+      width: 50px;
+  }
+  
+  .links {
+      
+      transition: all 0.3s;
+      overflow-y: hidden;
+      position: absolute;
+      display: block; /*displayed in block wise space in between*/
+      width: 100%;
+      height: 0px;
+      top: 50px;
+      left: 0px;
+  }
+  .links a {
+      display: block;
+      width: 100%;
+  }
+  #hamburger:not(:checked)~.links {
+      height: 0px;
+  }
+  #hamburger:checked~.links {
+      height: calc(100vh - 50px);
+  }
+  
 }
 
 @keyframes wave {
@@ -22,29 +116,12 @@
   100% { transform: rotate(0deg) }
 }
 
-.nav-menu{
-    display: flex; /*to get in one row*/
-}
 
-.nav-menu li{
-    
-    list-style: none;
-    padding: 0 1rem; /*left right0*/
-}
-.nav-menu li :hover{
-    color:white;
-    font-size: x-large;
-}
-.nav-menu li a{
-
-    font-size: 1.2rem;
-    font-weight: 500;
-}
-
-h2, p, h4,a{
-  color:white;
+a{
   text-decoration: none;
 }
+
+
 .intro{
     padding: 1rem;
     margin: 0px;
@@ -95,13 +172,15 @@ h2, p, h4,a{
     width: 100%;
     display: flex;
     @media (max-width:600px) {
-      padding:2rem 10rem;
+      padding:2rem;
+      justify-content: center;
     }
   }
   .foot .symbols a{
     padding: 30px;
     @media (max-width:600px) {
-      padding-right:20px;
+      padding-right:5px;
+      justify-content: center;
     }
   }
   .symbols a:hover{
@@ -114,6 +193,9 @@ h2, p, h4,a{
       background-attachment: fixed;
       background-position: center;
       font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      @media screen and (max-width:600px){
+        background-image: url("../img/mobilebg.jpeg");
+      }
   }
   .project p,h2{
     padding-bottom: 20px;
@@ -212,14 +294,23 @@ h2, p, h4,a{
     margin-top: 2rem;
   }
   .cont{
-    background-image: url(../img/proimg.jpg);
+    
     padding: 6rem;
+    margin: 0%;
+    
+
     text-align: center;
     @media screen and (max-width:600px) {
       background-image:none;
       text-align:center;
     }
     
+  }
+  .contback{
+    background-image:url("../img/mobilebg.jpeg");
+    background-size:cover;
+    background-attachment: fixed;
+    background-position: center;
   }
   .container h3{
     margin-top:5rem; /*for drop a comment*/
@@ -230,10 +321,7 @@ h2, p, h4,a{
     /*to center the form part like name email message feilds*/
     display: flex;
     justify-content: center;
-    @media screen and (max-width:600px){
-      margin: 0px;
-      justify-content:center;
-    }
+    
   
   }
   .contain{
@@ -243,8 +331,11 @@ h2, p, h4,a{
     border-radius: 20px;
     @media screen and (max-width:600px){
       font-size:small;
-      width:fit-content;
-      border:none;
+      width:287px;
+      justify-content:center;
+      border:2px solid whitesmoke;
+      margin-left:0rem;
+      
     }
   }
   td input{
@@ -265,7 +356,7 @@ h2, p, h4,a{
 
   
   .ab{
-    background-image: linear-gradient(rgb(87, 76, 76),rgb(75, 69, 69),rgb(87, 76, 76));
+    background-image: url("../img/proimg.jpg");
     border: 1px solid white;
     width:450px;
     padding: 1rem;
@@ -273,12 +364,15 @@ h2, p, h4,a{
     border-radius: 2rem;
     line-height: 2;
     font-size: larger;
+    
   }
 
-  .ab :hover{
-    border: 2px solid white;
-    transition: all 0.5s;
-    background-image: linear-gradient(rgb(117, 109, 109),rgb(117, 109, 109));
+  @media screen and (max-width:600px){
+    .ab{
+      background-image: url("../img/proimg.jpg");
+      margin-left: 0rem;
+      width: fit-content;
+    }
   }
   .abhead{
     margin: 2rem;
